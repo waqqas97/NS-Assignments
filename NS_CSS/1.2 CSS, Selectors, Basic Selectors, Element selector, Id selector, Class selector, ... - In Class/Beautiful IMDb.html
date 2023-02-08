@@ -1,0 +1,47 @@
+<!-- Beautiful IMDb
+
+People are bored with the original movie detail page of IMDb- https://www.imdb.com/title/tt0241527/. You want to update a section for them and make it more beautiful.
+Some mandatory styles are mentioned below. You can choose to add more to make it more beautiful.
+1. the poster for the movie has to be in img tag and should have the following CSS properties:
+- height
+- width
+- opacity
+2. The description of the movie should be in p tag in the center of the page using the following CSS:
+- position
+- - top:
+- - width:
+- text-align
+- font-size
+
+Use class selector for CSS with moviePic for img tag and movieDetail for p tag
+Note: Don't use inline CSS
+Note: It'd be a good idea to read about the position property. -->
+
+
+
+<!-- html code goes here -->
+<html>
+    <head></head>
+    <img class="moviePic" src="https://upload.wikimedia.org/wikipedia/en/9/99/Dangal_Poster.jpg">
+    <p class="movieDetail">Mahavir Singh Phogat, a former wrestler,
+        decides to fulfil his dream of winning a gold
+        medal for his country by training his daughters
+        for the Commonwealth Games despite the existing social stigmas.
+    </p>
+</html>
+
+
+
+/* css code goes here */
+.moviePic{
+    height:300px;
+    width:250px;
+    opacity:0.8;
+}
+.movieDetail{
+    position:relative;
+    top: 50px;
+    width:200px;
+    text-align:center;
+    font-size:14px;
+}

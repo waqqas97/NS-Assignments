@@ -1,0 +1,73 @@
+<!-- CSS Grids
+
+Your task is to create a grid of 12 divs
+
+Each of the 12 child divs has a class name .card
+
+Each div with class name .card contains values in capital letters which are
+ONE , TWO ...........upto TWELVE
+
+The parent container div have class .cards
+
+With the change in size only the size of div with class name .cards changes while the number of div per row remains the same
+
+In parent div with class name .cards you need to use CSS which are
+displayshould have value grid
+
+grid-template-columns CSS property which defines the line names and track sizing functions of the grid columns
+
+In grid-template-columns uses repeat() function and supply arguments according to criteria that there should be 3 items in a row and each item should occupy 1fr of space.
+grid-gapshould have value 1 rem
+
+Check out demo video given below
+
+
+
+
+Demo Video
+https://d3dyfaf3iutrxo.cloudfront.net/general/upload/248fb7c0eab949a5900c9a6a118e3def.webm -->
+
+
+
+<!-- html code goes here -->
+
+<div class="cards">
+    <div class="card">ONE</div>
+    <div class="card">TWO</div>
+    <div class="card">THREE</div>
+    <div class="card">FOUR</div>
+    <div class="card">FIVE</div>
+    <div class="card">SIX</div>
+    <div class="card">SEVEN</div>
+    <div class="card">EIGHT</div>
+    <div class="card">NINE</div>
+    <div class="card">TEN</div>
+    <div class="card">ELEVEN</div>
+    <deiv class="card">TWELVE</deiv>
+
+</div>
+
+
+
+html {
+    font-size: 22px;
+  }
+  body {
+    padding: 1rem;
+  }
+
+  .card {
+    background-color: rgb(17, 72, 118);
+    color: white;
+    padding: 1rem;
+    height: 4rem;
+    border: 2px solid black;
+  }
+
+  .cards {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+   /* code here */
+  }

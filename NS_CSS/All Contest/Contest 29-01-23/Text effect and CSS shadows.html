@@ -1,0 +1,56 @@
+<!-- Text effect and CSS shadows
+
+You have been given some HTML and CSS code initially in the question and you have to produce the output as shown in the image below.
+
+Increase the window size to see the image properly
+
+Implement the following steps to pass all the test cases- -->
+
+
+
+<!-- html code goes here -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1>Heading</h1>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti dignissimos iure natus facilis molestias fugiat aliquid ipsum nesciunt dolores odit. Sequi incidunt laboriosam praesentium ducimus consequatur non eaque aliquam laborum.</div>
+    
+    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem repellendus quas, consectetur magnam voluptates asperiores in amet quo, omnis nostrum saepe illo recusandae est, repellat eum id numquam quam. Deserunt?</div>
+</body>
+</html>
+
+
+
+/* css code goes here */
+*{
+    margin:0;
+    padding:0
+}
+
+div{
+    height:10px;
+    border:5px solid red;
+    margin:50px;
+    padding:10px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    /* uncomment the below line */
+    overflow: hidden;
+    
+    
+}
+
+h1{
+    text-align: center;
+    margin-top: 10px;
+    text-shadow: 2px 2px 5px rgb(255, 0, 0);
+
+}

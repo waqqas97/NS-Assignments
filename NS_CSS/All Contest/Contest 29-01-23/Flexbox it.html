@@ -1,0 +1,88 @@
+<!-- Flexbox it
+
+You have been provided with some HTML and CSS code. You have to only use flexbox and get the desired output as shown in the image below.
+
+Implement the following steps to pass all the test cases-
+
+
+Set the "justify-content" attribute of container class to be "space-between"
+
+Set the "display" attribute of item class to be "flex"
+
+Let the items take the extra left over space evenly.
+
+Set the "justify-content" attribute of item class to be "space-between"
+
+Set the "display" attribute of subitem class to be "flex"
+
+Let the subitems take the extra left over space evenly.
+
+Set the "flex-direction" attribute of subitem class to be "column"
+
+Set the "justify-content" attribute of subitem class to be "center"
+https://d3dyfaf3iutrxo.cloudfront.net/thumbnail/assignment/question/a7bddf6815cc415a86cbad561b5beb48.png -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div class="container">
+    <div class="item">
+      <div class="subitem">Subtitem #01</div>
+      <div class="subitem">Subtitem #02</div>
+      <div class="subitem">Subtitem #03</div>
+      <div class="subitem">Subtitem #04</div>
+    </div>
+    <div class="item">
+      <div class="subitem">Subtitem #01</div>
+      <div class="subitem">Subtitem #02</div>
+      <div class="subitem">Subtitem #03</div>
+      <div class="subitem">Subtitem #04</div>
+    </div>
+  </div>
+  
+</body>
+</html>
+
+
+
+/* css code goes here */
+.container {
+    width: 90%;
+    background-color: green;
+    margin: 0 auto;
+    padding: 2em;
+    display: flex;
+    justify-content: space-between;
+    
+  }
+  
+  .item {
+    box-sizing: border-box;
+    max-width: 48.7%;
+    height:10em;
+    padding:inherit;
+    background-color: blue;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+  }
+  
+  .subitem {
+    flex-grow: 1;
+    background-color: red;
+    max-width: 22%;
+    text-align:center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
