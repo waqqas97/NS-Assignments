@@ -1,0 +1,70 @@
+<!-- Nested Lists
+
+You are given a simple Ordered List with id main.
+
+You need to give it an attribute type of a.
+You need to create a nested ordered list of foods, each food type containing unordered list of food items.
+
+
+
+The parent list should be an ordered list and each item in the list should be a list item.
+
+
+The list items should contain an unordered list of foods. The unordered list should contain list items of foods.
+
+
+The third list item should have an unordered list with attribute type of disc.
+
+
+The fourth list item should have an unordered list with attribute type of none.
+
+The list should be nested in the following way:
+
+image.png -->
+
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nested Lists</title>
+  </head>
+  <body>
+    <h2>Types of Foods</h2>
+    <ol id="main" type="a">
+      <li>Vegetables
+        <ul type="circle">
+          <li>pumpkin</li>
+          <li>squash</li>
+          <li>eggplant</li>
+          </ul>
+      </li>
+      <li>Fruits
+        <ul type="circle">
+          <li>mango</li>
+          <li>banana</li>
+          <li>apple</li>
+          </ul>
+      </li>
+      <li>Cereals
+        <ul type="disc">
+          <li>wheat</li>
+          <li>rice</li>
+          <li>barley</li>
+          </ul>
+      </li>
+      <li >Meat
+        <ul type="none">
+          <li>beaf</li>
+          <li>chicken</li>
+          <li>steak</li>
+          </ul>
+      </li>
+    </ol>
+  </body>
+</html>
+
+

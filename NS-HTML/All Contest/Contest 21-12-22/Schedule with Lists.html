@@ -1,0 +1,71 @@
+<!-- Schedule with Lists
+You are tired of not being able to do your tasks on time so this time you decided to make a list of all the tasks you want to do in a day.
+Using HTML Lists you decided to make 3 lists, each of a different type , one ordered list, one unordered List, and one descriptive list
+
+In Ordered List
+
+its id is #ordered-parent
+list items will be numbered with uppercase letters
+It has four items named get up in the morning, shopping, Newton School Assignment, Dinner
+The item named shopping contains an ordered list having id #ordered-child. Its items will be numbered with lowercase letters and it contains two items groceries, Drinks.
+
+
+
+In Unordered List
+
+its id is #unordered-parent
+It contains three items Coffee, Fruits, Milk
+The item Fruits contain an unordered List having id #unordered-chid and it contains items Banana, Pineapple
+
+
+In Descriptive List
+
+its id is #descriptive-list
+It contains the description term Black Drink which has description data Coca Cola and Pepsi
+It contains the description term Orange Drink which has description data which is Mirinda, Fanta
+
+
+
+An image is also attached at bottom of the question showing how the Lists will look after coding, just increase the question text window size to see the data.
+
+https://d3dyfaf3iutrxo.cloudfront.net/thumbnail/assignment/question/1f1dbc41a4cc4c7e9ba8b0ac408a07e0.jpeg -->
+
+
+<!-- html code goes here -->
+<html>
+    <head></head>
+    <title></title>
+    <body>
+        <h1>works to do</h1>
+        <ol id="ordered-parent" type="A">
+            <li>get up in the morning</li>
+            <li>shopping
+                <ol id="ordered-child" type="a">
+                <li>groceries</li>
+                <li>Drink</li>
+            </ol></li>
+            <li>Newton School Assignment</li>
+            <li>Dinner</li>
+        </ol>
+
+        <h1>Grocerise list</h1>
+        <ul id="unordered-parent">
+            <li>Coffee</li>
+            <li>Fruits
+                <ul id="unordered-child">
+                    <li>Banana</li>
+                    <li>Pineapple</li>
+                </ul>
+            </li>
+            <li>Milk</li>
+        </ul>
+
+        <h1>Drinks List</h1>
+        <d1 id="descriptive-list">
+            <dt>Black Drink</dt>
+            <dd>- Coca Cola, Pepsi</dd>
+            <dt>Orange Drink</dt>
+            <dd>- Mirinda, Fanta</dd>
+        </d1>
+    </body>
+</html>
