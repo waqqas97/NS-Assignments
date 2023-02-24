@@ -1,0 +1,78 @@
+<!-- Create List and Add Styles
+
+
+In this question, you'll be working with HTML lists and adding some styles to them. This question is divided into two sections: the HTML section and the CSS section.
+
+Following the instructions below to get the desired output as shown in the image below.
+
+HTML section:
+
+Create an unordered tag and give it a "drink-list" class.
+
+Create three list itemsand add Coffee, Tea, and Soft Drinks to the first, second, and third list item tags respectively.
+
+Below the third list item, add an ordered list tag, and within the tag add three list item tags.
+
+Add Coca Cola, Pepsi, and Mountain Dew to the first, second, and third list item tags respectively.
+
+
+
+CSS section:
+
+Select the unordered list with class "drink-list" and change its list style from default to circle. Add a margin of 20px from the top and bottom and 0 from the right and left. Add a padding of 20px from the left and make the rest sides 0. Use margin and padding shorthand when writing margin and padding properties. Add a background of rgb(54, 47, 217) color.
+
+Select all the list items in the class "drink-list" and increase their font size to 18px. Give a margin from the bottom of 10px. Change the font color from default to rgb(48, 227, 223).
+
+Select the ordered list and overwrite the list style and background color properties. Change the list style to alphabets in lowercase, and make the background rgb(133, 205, 253) color.
+
+Select the list items of the ordered list and overwrite its font color property. Change the color back to default, that is, rgb(0, 0, 0).
+
+
+This is how the lists will look after you have implemented the instructions.
+(expand the text window to see the image clearly) -->
+
+
+
+/* css code goes here */
+.drink-list{
+    list-style: circle;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding-left: 20px;
+    background-color: rgb(54,47,217);
+}
+
+.drink-list li{
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: rgb(48, 227, 223);
+}
+
+ol{
+    list-style: lower-alpha;
+    background-color: rgb(133, 205, 253);
+}
+
+ol .list {
+    color: rgb(0, 0, 0);
+}
+
+
+
+<!-- html code goes here -->
+<html>
+    <head></head>
+
+    <body>
+        <ul class ="drink-list">
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Soft Drinks</li>
+            <ol>
+                <li class = "list">Coca Cola</li>
+                <li class = "list">Pepsi</li>
+                <li class = "list">Dew</li>
+            </ol>
+        </ul>
+    </body>
+</html>
