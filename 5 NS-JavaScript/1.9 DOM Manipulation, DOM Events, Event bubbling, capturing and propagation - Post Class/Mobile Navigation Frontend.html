@@ -1,0 +1,126 @@
+<!-- Mobile Navigation Frontend
+
+
+
+Create a div with class name phone with an 4 images inside it. The images should have class name content. Only 1 image having the class name content show should be visible. The visible image should be according to the button selected in navbar.
+
+Create a navbar below it with 4 options. The image in the above container changes on clicking each of the below buttons.
+Create the navbar using a <ul> and then styling it. The current option corresponding to which the image is displayed should have a class active and styling to differentiate it from others. Change which image would be visible by changing its class name dynamically with JavaScript. The sources for the 4 images corresponding to each option has been provided below.
+
+
+'https://images.unsplash.com/photo-1480074568708-e7b720bb3f09?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80'
+
+'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80'
+
+'https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1266&q=80'
+
+'https://yt3.ggpht.com/ytc/AKedOLQcC81-nEY5of9YYjoL3l8uKO_QUhag_Yy0KYvz=s900-c-k-c0x00ffffff-no-rj'
+
+The options may be given any name according to you. -->
+
+
+
+<!-- html code goes here -->
+<html>
+    <head>
+        <link href="./style.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <div class="phone">
+            <img id="tree_image" class="content show" src="https://images.unsplash.com/photo-1480074568708-e7b720bb3f09?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80" alt="tree"/>
+            <img id="laptops_image" class="content" src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="laptops"/>
+            <img id="pen_image" class="content" src="https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1266&q=80" alt-"pen"/>
+            <img id="newton_image" class="content" src="https://yt3.ggpht.com/ytc/AKedOLQcC81-nEY5of9YYjoL3l8uKO_QUhag_Yy0KYvz=s900-c-k-c0x00ffffff-no-rj" alt="newtonschool"/>
+        </div>
+        <nav>
+            <ul>
+                <li><button class="btn tree active" >Home</button></li>
+                <li><button class="btn laptops" >Work</button></li>
+                <li><button class="btn pen" >Pen</button></li>
+                <li><button class="btn newton">Newton School</button></li>
+            </ul>
+        </nav>
+        <script src="./app.js"></script>
+    </body>
+</html>
+
+
+
+/* css code goes here */
+.btn{
+    background-color: orangered;
+    color:white;
+    border:1px solid whitesmoke;
+    border-radius:4px;
+    padding:4px;
+}
+ul{
+    list-style: none;
+}
+li{
+    display: inline;
+    margin:5px;
+    padding:5px;
+}
+.active{
+    background-color: red;
+    color:white;
+    border:1px solid whitesmoke;
+    border-radius:4px;
+    padding:4px;
+}
+.content{
+    display:none;
+}
+.show{
+    display:block;
+}
+.btn:hover,.active:hover{
+    background-color: black;
+    color: white;
+}
+img{
+    width:auto;
+    height:500px;
+}
+
+
+// javascript code goes here
+function removeImageClass(){
+    const images = document.querySelectorAll(".content");
+    for(let image of images){
+        if(image.classList.contains("show"))
+            image.classList.remove("show");
+    }
+}
+function removeButtonClass(){
+    const buttons = document.querySelectorAll(".btn");
+    for(let btn of buttons){
+        if(btn.classList.contains("active"))
+            btn.classList.remove("active");
+    }
+}
+const btns = document.querySelectorAll(".btn");
+btns.forEach(function(btn){
+    btn.addEventListener("click",function(event){
+        removeImageClass();
+        removeButtonClass();
+        const styles = event.currentTarget.classList;
+        if(styles.contains("tree")){
+            document.getElementById("tree_image").classList.add("show");
+            styles.add("active");
+        }
+        else if(styles.contains("laptops")){
+            document.getElementById("laptops_image").classList.add("show");
+            styles.add("active");
+        }
+        else if(styles.contains("pen")){
+            document.getElementById("pen_image").classList.add("show");
+            styles.add("active");
+        }
+        else if(styles.contains("newton")){
+            document.getElementById("newton_image").classList.add("show");
+            styles.add("active");
+        }
+    });
+});
