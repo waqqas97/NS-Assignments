@@ -1,0 +1,65 @@
+<!-- Youtube Likes
+
+
+We've all seen the like and dislike buttons on youtube. There is a number that shows the count of total likes. Let's replicate that feature of Youtube and use it in our own social networking site.
+
+Acceptance Criteria:
+
+Render two buttons. The Like button should have id="increment". The dislike button should have id="decrement"
+
+There should be a h3 element that displays the count of the count of Likes. This element should have id="counter"
+
+The count should not go below zero. If dislike button is pressed when count is 0, it should remain at 0 -->
+
+
+
+<!-- html code goes here -->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <div>
+            <button type="button" id="increment" onclick="increment()">
+                Likes
+            </button>
+            
+            <h3 id="counter">
+                Count
+            </h3>
+            
+            <button type="button" id="decrement" onclick="decrement()">
+                Dislikes
+            </button>
+        </div>
+        
+        <script src="./script.js" async defer></script>
+    </body>
+</html>
+
+
+
+
+// javascript code goes here
+var data = 0;
+
+document.getElementById("counter").innerText = data;
+  
+
+function increment() {
+    data = data + 1;
+    document.getElementById("counter").innerText = data;
+}
+
+function decrement() {
+    data = data - 1;
+    if(data <= 0){
+        data = 0;
+    }
+    document.getElementById("counter").innerText = data;
+}
