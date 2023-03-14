@@ -1,0 +1,65 @@
+<!-- Takes Five JS
+
+
+
+In this project, we will be displaying 5 numbers with a twist.
+
+On initial load, show numbers from 1 to 5 in individual divs with id="number-display" and two buttons.
+The first button will have id="back-button" and text "Prev Page", which will be disabled by default(or whenever we are on the first page, i.e. showing numbers from 1 to 5)
+the second button will have id="next-button" and the text "Next Page"
+
+On clicking the Next Page button, we will display the following 5 numbers, i.e. from 6 to 10.
+And since we are on page 2, the Prev Page button will be enabled, and upon clicking that, it takes
+you back to the original 1-5 numbers and also disables the back button since we can't go back from page 1. -->
+
+
+<!-- html code goes here -->
+<div id ="1">1</div>
+<div id ="2">2</div>
+<div id ="3">3</div>
+<div id ="4">4</div>
+<div id ="5">5</div>
+<button id="back-button" disabled>Prev Page</button>
+<button id="next-button">Next Page</button>
+
+
+
+// javascript code goes here
+const pButton=document.getElementById('back-button');
+const nButton=document.getElementById('next-button');
+const div1=document.getElementById('1');
+const div2=document.getElementById('2');
+const div3=document.getElementById('3');
+const div4=document.getElementById('4');
+const div5=document.getElementById('5');
+nButton.addEventListener('click',funcnext);
+pButton.addEventListener('click',funcprev);
+let i=1;
+function funcprev(){
+    i--;
+    let vrbl=parseInt(div1.textContent)-5;
+    div1.textContent=vrbl;
+    vrbl=parseInt(div2.textContent)-5;
+    div2.textContent=vrbl;
+    vrbl=parseInt(div3.textContent)-5;
+    div3.textContent=vrbl;
+    vrbl=parseInt(div4.textContent)-5;
+    div4.textContent=vrbl;
+    vrbl=parseInt(div5.textContent)-5;
+    div5.textContent=vrbl;
+    if(i==1) pButton.disabled=true;
+}
+function funcnext(){
+    if(pButton.disabled==true) pButton.disabled=false;
+    i++;
+    let vrbl=parseInt(div1.textContent)+5;
+    div1.textContent=vrbl;
+    vrbl=parseInt(div2.textContent)+5;
+    div2.textContent=vrbl;
+    vrbl=parseInt(div3.textContent)+5;
+    div3.textContent=vrbl;
+    vrbl=parseInt(div4.textContent)+5;
+    div4.textContent=vrbl;
+    vrbl=parseInt(div5.textContent)+5;
+    div5.textContent=vrbl;
+}

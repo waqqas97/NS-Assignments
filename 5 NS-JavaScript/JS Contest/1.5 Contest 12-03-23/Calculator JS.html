@@ -1,0 +1,71 @@
+<!-- Calculator JS
+
+
+Create a basic calculator using HTML, CSS and JAVASCRIPT which perform simple +, - , /, * operations. Make it clean and pretty
+
+Acceptance Criteria:
+
+Create number buttons with id "block0" to "block9".
+
+Create buttons for operations with ids "plus", "minus", "multiply", "divide" for the respective operation.
+and make one clear button.
+
+Create button for decimal operations with id "dot" for respective operation.
+
+There should be a button that, on click, displays the answer. This button should have id="ans"
+
+There should be a reset button that, on click, clears the answer. This button should have id="clr"
+
+On division by 0, the answer should be 'Infinity'
+
+On division of 0/0 it should give 'NaN'
+
+The element where input/output is displayed should be of input type and have id="input". The value should get updated with every calculation -->
+
+
+
+
+<!-- HTML here -->
+<div class = "maindiv">
+    <form name = "form1">
+        <input  type = "text" id = "input" name = "answer"><br>
+        <input id = "block1" type = "button" value = "1" onclick = "form1.answer.value += '1' ">
+        <input id = "block2" type = "button" value = "2" onclick = "form1.answer.value += '2' ">
+        <input id = "block3" type = "button" value = "3" onclick = "form1.answer.value += '3' ">
+        <input id = "plus"   type = "button" value = "+" onclick = "form1.answer.value += '+' ">
+        <br>
+        <br>
+
+        <input id = "block4" type="button" value="4" onclick="form1.answer.value+='4'">
+        <input id = "block5" type="button" value="5" onclick="form1.answer.value+='5'">
+        <input id = "block6" type="button" value="6" onclick="form1.answer.value+='6'">
+        <input id = "minus"  type="button" value="-" onclick="form1.answer.value+='-'">
+        <br>
+        <br>
+
+        <input id = "block7" type="button" value="7" onclick="form1.answer.value+='7'">
+        <input id = "block8" type="button" value="8" onclick="form1.answer.value+='8'">
+        <input id = "block9" type="button"value="9"  onclick="form1.answer.value+='9'">
+        <input id = "multiply"type="button" value="*" onclick="form1.answer.value+='*'" >
+        <br>
+        <br>
+        <input id = "divide" type="button" value="/" onclick="form1.answer.value+='/'">
+        <input id = "block0" type="button" value="0" onclick="form1.answer.value+='0'">
+        <input id = "dot"    type="button" value="." onclick="form1.answer.value+='.'">
+        <input id = "ans"    type="button" value="=" onclick="form1.answer.value = eval(form1.answer.value)">
+        <br>
+        <br>
+        <input  type = "button" value = "Clear All " id = "clr" onclick = "form1.answer.value=' ' " >  
+        
+ </form>
+ </div>
+
+</html>
+
+
+
+<!-- JS here -->
+function show(val){
+    const input = document.querySelector('input');
+    input.value = `${input.value}${val}`;
+}
